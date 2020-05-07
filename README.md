@@ -23,7 +23,7 @@ The extension saves the user's private key and the public key is saved on blockc
 <br>    )
 
 
-<h2>This is code which is use to get data which is send from the chrome extension to react file</h2>
+<h2>This is code which is use to get data which is send from the chrome extension to React </h2>
 
 
 <br> async componentDidMount(){
