@@ -7,17 +7,17 @@ Piece of code I use to pass data between my web application to chrome extension
  // Creatating the custom event 
  <br>
  <br>
-      var event = new CustomEvent(
-      "newMessage", 
-      {
-        detail: {
-          message: "Hello World!",
-          time: new Date(),
-          name:"Rutvik Patel",
-          emailId:"rpatel@csus.edu",
-          privateKey:"dhdhdhdhdhd"
-        },
-        bubbles: true,
-        cancelable: true
-      }
-    )
+ <br>     var event = new CustomEvent(
+<br>      "newMessage", 
+<br>      {
+<br>        detail: {
+<br>          message: "Hello World!",
+<br>          time: new Date(),
+<br>         name:"Rutvik Patel",
+<br>          emailId:"rpatel@csus.edu",
+<br>          privateKey:"dhdhdhdhdhd"
+<br>        },
+<br>        bubbles: true,
+<br>        cancelable: true
+<br>      }
+<br>    )
