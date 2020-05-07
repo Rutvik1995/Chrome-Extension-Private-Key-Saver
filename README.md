@@ -2,7 +2,7 @@
 The extension saves the user's private key and the public key is saved on blockchain
 
 <br>
-Piece of code I use to pass data between my web application to chrome extension 
+<h2>Piece of code I use to pass data between my web application to chrome extension </h2>
  <br>var event = document.createEvent('Event');
  // Creatating the custom event 
  <br>
@@ -21,3 +21,9 @@ Piece of code I use to pass data between my web application to chrome extension
 <br>        cancelable: true
 <br>      }
 <br>    )
+
+
+<h2>This is code which is use to get data which is send from the chrome extension to react file</h2>
+
+
+
