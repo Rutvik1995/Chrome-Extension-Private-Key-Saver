@@ -35,7 +35,15 @@ document.addEventListener("click", function(event){
   if(x==0){
     console.log("result is empty" );
   }
+  else{
+    var data = {
+      random: 'Some data',
+      more: 'More data'
+      };
+  // send data through a DOM event
+    document.dispatchEvent(new CustomEvent('csEvent', {detail: data}));
 
+  }
 
       
     });
