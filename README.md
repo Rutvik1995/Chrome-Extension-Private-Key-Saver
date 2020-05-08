@@ -21,7 +21,8 @@ The extension saves the user's private key and the public key is saved on blockc
 <br>        cancelable: true
 <br>      }
 <br>    )
-
+<br>
+  document.dispatchEvent(event);
 
 <h2>This is code which is use to get data which is send from the chrome extension to React </h2>
 
