@@ -2,7 +2,7 @@
 The extension saves the user's private key and the public key is saved on blockchain
 
 <br>
-Piece of code I use to pass data between my web application to chrome extension 
+<h2>Piece of code I use to pass data between my web application to chrome extension </h2>
  <br>var event = document.createEvent('Event');
  // Creatating the custom event 
  <br>
@@ -21,3 +21,30 @@ Piece of code I use to pass data between my web application to chrome extension
 <br>        cancelable: true
 <br>      }
 <br>    )
+<br>
+  document.dispatchEvent(event);
+
+<h2>This is code which is use to get data which is send from the chrome extension to React </h2>
+
+
+<br> async componentDidMount(){
+<br>      document.addEventListener('csEvent', this.checkEvent);
+<br>    }
+<br>    async componentWillMount(){
+<br>      console.log("in component will mount");
+<br>      await this.loadWeb3()
+<br>      await this.loadBlockChainData();
+<br>      document.addEventListener('csEvent', this.checkEvent);
+<br>    }
+<br>
+<br>    checkEvent = (event) => {
+<br>      var data = event.detail;
+<br>      console.log(data);
+<br>      console.log("Nv Enter:", event);
+<br>    }
+
+
+
+
+
+
