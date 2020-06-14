@@ -8,6 +8,44 @@ console.log("Hello World From content js");
 
 // })
 
+console.log("Hello World From content js");
+window.onload = function() {
+  var url =window.location.href;
+  console.log(url);
+  if(url.includes("http://localhost:3000/viewPost/")){
+    console.log("Message from the extension");
+    chrome.storage.local.get(['key'], function(result) {
+      var data = {
+        sendMessage:'Not Empty',
+        random: 'Some data',
+        more: 'More data',
+        privateKeyData:result.key
+        };
+    //send data through a DOM event
+    console.log(data);
+    console.log("****************************");
+      document.dispatchEvent(new CustomEvent('csEvent', {detail: data}));
+    });
+  }
+
+  if(url.includes("http://localhost:3000/MainPage")){
+    console.log("Message from the extension");
+    chrome.storage.local.get(['key'], function(result) {
+      var data = {
+        sendMessage:'Not Empty',
+        random: 'Some data',
+        more: 'More data',
+        privateKeyData:result.key
+        };
+    //send data through a DOM event
+    console.log(data);
+    console.log("****************************");
+      document.dispatchEvent(new CustomEvent('csEvent', {detail: data}));
+    });
+  }
+}
+
+
 
 $( "#firstName" ).keypress(function() {
   console.log( "Handler for .keypress() called." );
@@ -45,8 +83,42 @@ else{
 });
 
 
+$('#addPost').click(function(){
+  console.log("button click");
+  alert("hello");
+});
 
-// var emailId;
+
+document.addEventListener("click", function(event){
+  console.log("in evenet");
+  var url =window.location.href;
+  if(url.includes("http://localhost:3000/MainPage")){
+    console.log("in event console.log()");
+    console.log(event);
+    if(event.target.id=="addPost"){
+      console.log("Do Activity ");
+      ////
+
+      chrome.storage.local.get(['key'], function(result) {
+        var data = {
+          sendMessage:'Not Empty',
+          random: 'Some data',
+          more: 'More data',
+          privateKeyData:result.key
+          };
+      //send data through a DOM event
+      console.log(data);
+      console.log("****************************");
+        document.dispatchEvent(new CustomEvent('csEvent', {detail: data}));
+      });
+
+      console.log("Do Activity 2");
+      ////
+      ///
+    }
+  }
+ });
+
 // document.addEventListener("click", function(event){
 // //alert("from js");
 //   // console.log(event.target);
